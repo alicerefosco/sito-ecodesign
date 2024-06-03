@@ -1,0 +1,333 @@
+body {
+    background-color: #121212;
+    margin: 0;
+    font-family: "Almarai";
+}
+
+img {
+    max-width: 100%;
+    border-radius: 20px;
+}
+
+a ul li p {
+    margin: 0;
+    padding: 0;
+    line-height: 130%;
+}
+
+header {
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 32px;
+    border-bottom: solid white 2px;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 16px;
+}
+
+ul {
+    align-items: center;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 24px;
+}
+
+header a {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+header .greendesign a {
+    letter-spacing: -2.56px;
+    font-size: 32px;
+}
+
+header .greendesign a:hover {
+    color: greenyellow;
+}
+
+.testata .greendesign {
+    height: 14px;
+}
+
+.illustrazione {
+    max-width: 1200px;
+    margin: 64px auto 0;
+    border: solid white 2px;
+    border-radius: 20px;
+}
+
+.testo {
+    max-width: 1120px;
+    margin: 112px auto 0;
+}
+
+.sinistra p {
+    max-width: 543px;
+    margin-bottom: 12px;
+    font-size: 16px;
+    color: #fff;
+    line-height: 130%;
+}
+
+.tutta-pagina {
+    max-width: 100%;
+    margin-top: 120px;
+}
+
+.link {
+    margin-left: 685px;
+    border-radius: 20px 0px 0px 20px;
+    border-top: 3px solid #FFF;
+    border-bottom: 3px solid #FFF;
+    border-left: 3px solid #FFF;
+    padding: 4px 16px;
+}
+
+.link p {
+    color: #FFF;
+    max-width: 613px;
+    font-size: 18px;
+    padding: 0;
+}
+
+.button {
+    margin-top: 16px;
+    margin-left: 685px;
+    padding: 4px 16px;
+    max-width: fit-content;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px 0px #000, 1px -1px 4px 0px rgba(0, 0, 0, 0.50) inset;
+    background: #FFF;
+}
+
+.button:hover {
+    background-color: #d9d9d9;
+    box-shadow: none;
+}
+
+.button a {
+    font-size: 16px;
+    text-decoration: none;
+    color: #000;
+}
+
+.destra {
+    margin-top: 64px;
+    margin-left: 559px;
+    padding: 4px 16px;
+    border-left: 3px solid white;
+}
+
+strong {
+    line-height: 130%;
+}
+
+.destra p {
+    font-size: 18px;
+    color: #fff;
+}
+
+.card {
+    max-width: 1120px;
+    margin:  32px auto 0;
+}
+
+.griglia {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+}
+
+.griglia-brand {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+}
+
+.card-link img {
+    border-radius: 10px;
+    border: solid white 2px;
+    height: 256px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-brand img {
+    border-radius: 10px;
+    border: solid white 2px;
+    height: 542px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.img-link {
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px 0px #000, 1px -1px 4px 0px rgba(0, 0, 0, 0.50) inset;
+    background: #FFF;
+    padding: 8px 16px;
+    margin-top: 8px;
+    text-align: center;
+}
+
+.img-link:hover {
+    box-shadow: none;
+    background-color: #d9d9d9;
+}
+
+.img-link a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.img-link a:hover {
+    text-decoration: none;
+}
+
+footer {
+    max-width: 1120px;
+    margin: 192px auto 0;
+}
+
+footer .greendesign a {
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: -2.56px;
+    font-size: 24px;
+}
+
+footer .greendesign {
+    border-bottom: solid white 2px;
+    max-width: 256px;
+}
+
+.chisiamo-contatti a {
+    color: #FFF;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    max-width: fit-content;
+    margin: 16px 0;
+    font-weight: bold;
+}
+
+
+.footer {
+    justify-content: space-between;
+    border-bottom: #FFF solid 2px;
+    display: flex;
+}
+
+.chisiamo-contatti p {
+    margin-bottom: 16px;
+    color: #fff;
+}
+
+.newsletter {
+    height: fit-content;
+    max-width: 400px;
+    margin-top: 95px;
+}
+
+
+.newsletter p {
+    height: fit-content;
+    font-size: 14px;
+    color: #FFF;
+    margin-bottom: 16px;
+}
+
+.box-email {
+    padding: 8px 150px 8px 16px;
+    border: #fff solid 2px;
+    border-radius: 10px;
+}
+
+.box-email a {
+    font-weight: bold;
+    font-size: 12px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.sotto-linea {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.social ul {
+    margin: 16px 0 0 0;
+    gap: 64px;
+}
+
+.crediti p {
+    font-size: 14px;
+    color: #fff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.greendesign a:hover {
+    text-decoration: none;
+}
+
+.button a:hover {
+    text-decoration: none;
+}
+
+.elenco-pagina {
+    max-width: 100%;
+    margin-top: 64px;
+}
+
+.elenco {
+    margin-left: 685px;
+}
+
+.primo {
+    border-bottom: solid white 3px;
+    margin-bottom: 16px;
+}
+
+.primo p {
+    color: #FFF;
+    font-size: 20px;
+    padding: 0;
+    margin-bottom: 4px;
+}
+
+.testo-uguale {
+    max-width: 1120px;
+    margin: 64px auto 0;
+}
+
+.testo-titolo {
+    max-width: 1120px;
+    margin: 48px auto 0;
+}
+
+.titolo p {
+    text-transform: uppercase;
+    color: #FFF;
+    font-size: 24px;
+}
+
+.testo-presentazione {
+    max-width: 1120px;
+    margin: 16px auto 0;
+}
+
+
