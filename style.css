@@ -6,10 +6,10 @@ body {
 
 img {
     max-width: 100%;
-    border-radius: 20px;
+    display: block;
 }
 
-h1 h2 h3 h4 a ul li p {
+h1 h2 h3 h4 h5 a ul li p {
     margin: 0;
     padding: 0;
     line-height: 130%;
@@ -30,7 +30,11 @@ header nav {
     display: flex;
     justify-content: space-between;
     align-items: end;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
+}
+
+header nav ul li a {
+    font-family: "Montserrat"
 }
 
 header ul {
@@ -42,31 +46,35 @@ header ul {
     gap: 24px;
 }
 
+header ul li a:hover {
+    color: #d9d9d9;
+}
+
 header a {
     color: #fff;
     text-transform: uppercase;
     text-decoration: none;
 }
 
-header .greendesign a {
-    letter-spacing: -2.56px;
+header a h5 {
+    font-family: "Montserrat";
+    letter-spacing: -5px;
     font-size: 32px;
+    margin: 0;
+    font-weight: 200;
 }
 
-header .greendesign a:hover {
-    color: #A1D82E;
+header a h5:hover {
+    color: #a5b979;
     text-decoration: none;
 }
 
-.testata .greendesign {
-    height: 14px;
-}
-
-.illustrazione {
+.illustrazione img {
     max-width: 1120px;
-    margin: 32px auto 0;
-    border: solid white 2px;
+    margin: 64px auto 0;
+    border: solid white 3px;
     border-radius: 20px;
+    object-fit: cover;
 }
 
 .testo-presentazione {
@@ -92,8 +100,6 @@ header .greendesign a:hover {
     color: #FFF;
 }
 
-
-
 h1 {
     color: #FFF;
     text-transform: uppercase;
@@ -101,20 +107,31 @@ h1 {
     font-weight: 400;
     font-size: 68px;
     margin: 0;
+    width: 700px;
 }
 
 h2 {
     font-size: 32px;
+    font-weight: 300;
     color: #FFF;
     padding: 0;
     margin: 0;
     font-family: "Montserrat";
-    max-width: 544px;
-    margin-bottom: 8px;
+    width: 600px;
+    margin-bottom: 16px;
 }
 
 .titolo-testo-inizio {
-    margin-top: 64px;
+    margin-top: 32px;
+    width: 544px;
+}
+
+.titolo-testo-inizio p1 {
+    font-weight: 600;
+    font-size: 20px;
+    color: #FFF;
+    line-height: 130%;
+    letter-spacing: 0.5px;
 }
 
 .titolo-testo-inizio h2 {
@@ -124,79 +141,124 @@ h2 {
 
 .titolo-testo-inizio p {
     font-size: 20px;
-    margin-top: 0;
-    margin-bottom: 12px;
-    width: 544px;
+    font-weight: 400;
+    margin-top: 12px;
+    margin-bottom: 16px;
     color: #FFF;
+    line-height: 130%;
+    letter-spacing: 0.5px;
 }
 
 
 .titolo-testo p {
     font-size: 20px;
-    margin-top: 0;
-    margin-bottom: 12px;
-    width: 544px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    line-height: 130%;
+    letter-spacing: 0.5px;
 }
 
-.citazione-link {
-    margin-top: 240px;
-    max-width: 736px;
+.titolo-testo p1 {
+    font-weight: 600;
+    font-size: 20px;
+    color: #FFF;
+    line-height: 130%;
+    letter-spacing: 0.5px;
 }
 
-.citazione-link2 {
-    max-width: 736px;
+.titolo-testo {
+    max-width: 544px;
 }
 
-.citazione-link p {
-    font-size: 30px;
-}
-
-.citazione-link2 p {
-    font-size: 30px;
-}
-
-.citazione-link strong {
-    line-height: 200%;
-}
-
-.citazione-link2 strong {
-    line-height: 200%;
-
-}
-
-.button {
-    border-radius: 10px;
-    box-shadow: 2px 2px 5px 0px #000, 1px -1px 4px 0px rgba(0, 0, 0, 0.50) inset;
-    background: #FFF;
-    padding: 0;
-    margin-top: 8px;
-    text-align: center;
-    width: 256px;
-}
-
-.button h3 {
+.titolo-testo a {
     font-size: 18px;
+    font-family: "Montserrat";
+    font-weight: bold;
+    text-decoration: none;
     color: #000;
-    padding: 0;
+    padding: 6px 36px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 1px 1px 3px 0px #000, 1px -1px 4px 0px rgba(0, 0, 0, 0.50) inset;
+    letter-spacing: 0.5px;
 }
 
-.button:hover {
+.titolo-testo a:hover {
     background-color: #d9d9d9;
     box-shadow: none;
 }
 
-.citazione-link a {
-    font-size: 18px;
-    text-decoration: none;
-    color: #000;
-    padding: 0;
+.citazione-link p {
+    max-width: 736px;
+    font-size: 30px;
+    color: #FFF;
+    margin: 0 0 16px 0;
+    line-height: 130%;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.testo-cit {
+    margin: 240px auto;
+    max-width: 1120px;
+    display: grid;
+    justify-content: right;
+}
+
+.testo-cit2 {
+    margin: 120px auto;
+    max-width: 1120px;
+    display: grid;
+    justify-content: right;
+}
+
+.citazione-link2 p {
+    max-width: 736px;
+    line-height: 130%;
+    letter-spacing: 0.5px;
+    font-size: 28px;
+    color: #FFF;
+    margin: 0 0 16px 0;
+    font-weight: 800;
 }
 
 .citazione-link2 a {
     font-size: 18px;
+    font-family: "Montserrat";
+    font-weight: 800;
     text-decoration: none;
     color: #000;
-    padding: 0;
+    padding: 6px 36px;
+    margin-top: 8px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 1px 1px 3px 0px #000, 1px -1px 4px 0px rgba(0, 0, 0, 0.50) inset;
+}
+
+.citazione-link a {
+    font-size: 18px;
+    font-family: "Montserrat";
+    font-weight: 800;
+    text-decoration: none;
+    color: #000;
+    padding: 6px 36px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 1px 1px 3px 0px #000, 1px -1px 4px 0px rgba(0, 0, 0, 0.50) inset;
+}
+
+
+
+.citazione-link a:hover {
+    background-color: #d9d9d9;
+    box-shadow: none;
+    text-decoration: none;
+}
+
+.citazione-link2 a:hover {
+    background-color: #d9d9d9;
+    box-shadow: none;
+    text-decoration: none;
 }
 
 .card {
@@ -208,6 +270,36 @@ h2 {
     margin-bottom: 16px;
 }
 
+.elenco-lista-link {
+    margin-top: 120px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.elenco-lista-link li {
+    list-style-type: none;
+}
+
+.elenco-lista-link a {
+    text-align: center;
+    font-size: 18px;
+    font-family: "Montserrat";
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+    padding: 6px 36px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 1px 1px 3px 0px #000, 1px -1px 4px 0px rgba(0, 0, 0, 0.50) inset;
+}
+
+.elenco-lista-link a:hover {
+    background-color: #d9d9d9;
+    box-shadow: none;
+}
+
+
 .griglia {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -218,15 +310,10 @@ h2 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 32px;
-    max-width: 928px;
     margin: auto;
 }
 
-.griglia-brand .img-link {
-    align-items: center;
-}
-
-.card-link img {
+.griglia img {
     display: block;
     border-radius: 10px;
     border: solid white 2px;
@@ -235,52 +322,55 @@ h2 {
     object-fit: cover;
 }
 
-.card-brand img {
+.griglia-brand img {
     display: block;
     border-radius: 10px;
     border: solid white 2px;
-    height: 542px;
+    height: 500px;
     width: 100%;
     object-fit: cover;
 }
 
-.card-brand:hover {
-    opacity: 70%;
-}
-
-.img-link {
+.griglia h3 {
+    font-family: "Montserrat";
+    font-size: 16px;
     border-radius: 10px;
     box-shadow: 2px 2px 5px 0px #000, 1px -1px 4px 0px rgba(0, 0, 0, 0.50) inset;
     background: #FFF;
-    padding: 0;
     margin-top: 8px;
     text-align: center;
-    height: 32px;
-    align-items: center;
+    padding: 6px 0;
+    color: #121212;
 }
 
-.img-link h3 {
+.griglia-brand h3 {
     font-family: "Montserrat";
-    font-size: 16px;
+    font-size: 18px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px 0px #000, 1px -1px 4px 0px rgba(0, 0, 0, 0.50) inset;
+    background: #FFF;
+    margin: 8px 0 0;
+    text-align: center;
+    padding: 10px 0;
+    color: #121212;
 }
 
-.img-link:hover {
-    box-shadow: none;
-    background-color: #d9d9d9;
-}
-
-.img-link a {
-    color: #000;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.img-link a:hover {
+.griglia a {
     text-decoration: none;
 }
 
-h4 {
-    color: #FFF;
+.griglia-brand a {
+    text-decoration: none;
+}
+
+.griglia a:hover {
+    opacity: 70%;
+    h3 {box-shadow: none;}
+}
+
+.griglia-brand a:hover {
+    opacity: 70%;
+    h3 {box-shadow: none;}
 }
 
 footer {
@@ -288,35 +378,73 @@ footer {
     margin: 240px auto 0;
 }
 
-footer .greendesign a {
-    text-transform: uppercase;
-    color: #fff;
+footer a {
     text-decoration: none;
-    letter-spacing: -2.56px;
-    font-size: 24px;
+    color: #FFF;
 }
 
-footer .greendesign {
-    border-bottom: solid white 2px;
+footer a h5 {
+    font-family: "Montserrat";
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: -4px;
+    font-size: 24px;
+    font-weight: 200;
+    border-bottom: #FFF solid 2px;
     max-width: 256px;
+    margin: 0;
+}
+
+footer h5:hover {
+    color: #a5b979;
 }
 
 .chisiamo-contatti {
-    margin: 16px 0;
+    justify-content: space-between;
+    display: flex;
+    margin: 48px 0 16px 0;
 }
 
-.chisiamo-contatti h4 {
-    margin-bottom: 4px;
-    margin-top: 0;
+footer h4 {
+    margin: 0;
+    color: #FFF;
+    font-family: "Montserrat";
+}
+
+footer .chisiamo a {
+    text-decoration: none;
+}
+
+.chisiamo a h4 {
+    border: 2px white solid;
+    font-weight: 600;
+    color: #000;
+    border-radius: 10px;
+    padding: 4px 34px;
+    color: #FFF;
+}
+
+.chisiamo {
+    margin-top: 48px;
+}
+
+.chisiamo a h4:hover {
+    background-color: #FFF;
+    color: #000;
 }
 
 .chisiamo-contatti a {
     color: #FFF;
-    text-decoration: none;
     font-weight: bold;
     display: block;
     max-width: fit-content;
     font-weight: bold;
+    text-decoration: underline;
+}
+
+footer a h4:hover {
+    box-shadow: none;
+    background-color: #d9d9d9;
 }
 
 .chisiamo-contatti ul {
@@ -328,85 +456,112 @@ footer .greendesign {
 .chisiamo-contatti li {
     padding: 0;
     margin: 4px 0 0;
-    color: #FFF;
-    font-size: 14px;
-    font-weight: 200;
 }
 
 .chisiamo-contatti a {
     padding: 0;
     margin: 0;
     font-weight: 200;
+    text-decoration: none;
+    font-size: 14px;
+    color: #FFF;
 }
 
-.footer {
-    justify-content: space-between;
-    border-bottom: #FFF solid 2px;
-    display: flex;
+.chisiamo-contatti h4 {
+    font-size: 16px;
+}
+
+.chisiamo-contatti a:hover {
+    color: #d9d9d9;
+    text-decoration: underline;
 }
 
 .chisiamo-contatti p {
     color: #fff;
 }
 
+.contatti {
+    padding: 0;
+    margin: 0;
+}
 
 .sotto-linea {
+    border-top: 2px solid white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 32px;
 }
 
-.social ul {
-    margin: 16px 0 0 0;
-    gap: 64px;
+.sotto-linea a {
+    font-size: 16px;
+    margin-top: 4px;
+    color: #FFF;
+}
+
+.sotto-linea a:hover {
+    color: #d9d9d9;
+}
+
+.sotto-linea ul {
+    margin-top: 16px;
+    gap: 40.5px;
     display: flex;
     list-style-type: none;
 }
 
-.crediti p {
-    margin-top: 32px;
-    font-size: 14px;
-    color: #fff;
+.lista-elenco2 ul li p {
+    margin: 0;
+    font-size: 20px;
 }
 
-a:hover {
-    text-decoration: underline;
+.lista-elenco2 ul li {
+    margin-bottom: 16px;
+    padding: 0;
 }
 
-.greendesign a:hover {
-    color: grey;
-}
-
-.button a:hover {
-    text-decoration: none;
-}
-
-
-.img-link h3 {
-    padding: 4px 16px;
-    color: #000;
-    font-size: bold;
-}
-
-.griglia-brand a {
-    text-decoration: none;
-}
-
-.griglia a {
-    text-decoration: none;
+.lista-elenco2 p1 {
+    font-size: 30px;
+    font-weight: 600;
 }
 
 .lista-elenco {
     font-size: 30px;
     color: #FFF;
+}
 
+.lista-elenco2 {
+    font-size: 30px;
+    color: #FFF;
+    width: 640px;
+}
+
+.lista-elenco2 ul li p {
+    margin-bottom: 16px;
+    padding: 0;
+}
+
+.lista-elenco2 ul {
+    margin: 0;
+    padding: 0;
+}
+
+.lista-elenco2 strong {
+    line-height: 40px;
 }
 
 .lista-elenco p {
-    font-weight: bold;
+    width: 640px;
     margin: 0;
-    padding: 8px 0;
+    padding: 0;
+    font-weight: 600;
+}
+
+.lista-elenco strong {
+    line-height: 40px;
+}
+
+.lista-elenco li {
+    margin-bottom: 16px;
 }
 
 .lista-elenco ul {
@@ -422,3 +577,4 @@ a:hover {
 .titolo-testo li {
     margin-bottom: 32px;
 }
+
