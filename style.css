@@ -59,7 +59,7 @@ header a {
     text-decoration: none;
 }
 
-header a h5 {
+.header a h5 {
     font-family: "Montserrat";
     letter-spacing: -5px;
     font-size: 32px;
@@ -154,11 +154,13 @@ input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
 .testo {
     max-width: 1120px;
     margin: 240px auto 0;
+    padding: 0 16px;
 }
 
 .testo2 {
     max-width: 1120px;
     margin: 120px auto 0; 
+    padding: 0 16px;
 }
 
 .testo2 p {
@@ -237,7 +239,6 @@ h2 {
 
 .titolo-testo {
     max-width: 544px;
-    margin: 0 16px;
 }
 
 .titolo-testo a {
@@ -260,10 +261,12 @@ h2 {
 
 .citazione-link {
     max-width: 736px;
+    padding: 0 16px;
 }
 
 .citazione-link2 {
     max-width: 736px;
+    padding: 0 16px;
 } 
 
 .citazione-link p {
@@ -604,6 +607,7 @@ footer a h4:hover {
 .lista-elenco {
     font-size: 30px;
     color: #FFF;
+    max-width: 640px;
 }
 
 .lista-elenco2 {
@@ -623,7 +627,7 @@ footer a h4:hover {
 }
 
 .lista-elenco p {
-    width: 640px;
+    max-width: 640px;
     margin: 0;
     padding: 0;
     font-weight: 600;
@@ -649,7 +653,7 @@ footer a h4:hover {
 
 @media only screen and (max-width: 800px) {
 
-    header a h5 {
+    .header a h5 {
         font-family: "Montserrat";
         letter-spacing: -5px;
         font-size: 32px;
@@ -1086,12 +1090,13 @@ footer a h4:hover {
     .lista-elenco {
         font-size: 18px;
         color: #FFF;
+        max-width: 300px;
     }
     
     .lista-elenco2 {
         font-size: 18px;
         color: #FFF;
-        width: 320px;
+        max-width: 320px;
     }
     
     .lista-elenco2 ul li p {
