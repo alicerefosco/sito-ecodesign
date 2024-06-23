@@ -21,9 +21,12 @@ strong {
 
 header {
     max-width: 1120px;
-    margin: auto;
-    margin-top: 32px;
-    border-bottom: solid white 2px;
+    margin: 32px auto 0;
+}
+
+.navigazione {
+    border-bottom: solid white 3px;
+    margin: 0 16px;
 }
 
 header nav {
@@ -34,16 +37,16 @@ header nav {
 }
 
 header nav ul li a {
-    font-family: "Montserrat"
+    font-family: "Montserrat";
 }
 
 header ul {
     align-items: center;
     display: flex;
     list-style: none;
-    margin: 0;
     padding: 0;
     gap: 24px;
+    margin: 0;
 }
 
 header ul li a:hover {
@@ -61,7 +64,9 @@ header a h5 {
     letter-spacing: -5px;
     font-size: 32px;
     margin: 0;
-    font-weight: 200;
+    font-weight: 400;
+    padding: 0;
+    line-height: 100%;
 }
 
 header a h5:hover {
@@ -69,9 +74,15 @@ header a h5:hover {
     text-decoration: none;
 }
 
-.illustrazione img {
+.illustrazione {
     max-width: 1120px;
     margin: 64px auto 0;
+    padding: 0 16px;
+}
+
+.illustrazione img {
+    max-width: 100%;
+    display: block;
     border: solid white 3px;
     border-radius: 20px;
     object-fit: cover;
@@ -81,6 +92,64 @@ header a h5:hover {
     max-width: 1120px;
     margin: 0 auto;
 }
+
+.hamburger-lines {
+    display: none;
+    height: 26px;
+    width: 32px;
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    z-index: 2;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hamburger-lines .line {
+    display: block;
+    height: 2px;
+    width: 100%;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+}
+.hamburger-lines .line2 {
+    transition: transform 0.2s ease-in-out;
+}
+
+.hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+}
+
+input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+    transform: rotate(45deg);
+}
+
+input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+    transform: scaleY(0);
+}
+
+input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+    transform: rotate(-45deg);
+}
+
+.checkbox {
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 32px;
+    top: 16x;
+    right: 16px;
+    z-index: 5;
+    opacity: 0;
+    cursor: pointer;
+}
+
 
 .testo {
     max-width: 1120px;
@@ -107,7 +176,7 @@ h1 {
     font-weight: 400;
     font-size: 68px;
     margin: 0;
-    width: 700px;
+    max-width: 750px;
 }
 
 h2 {
@@ -122,8 +191,9 @@ h2 {
 }
 
 .titolo-testo-inizio {
-    margin-top: 32px;
-    width: 544px;
+    margin: 32px 0;
+    max-width: 544px;
+    padding: 0 16px;
 }
 
 .titolo-testo-inizio p1 {
@@ -152,8 +222,7 @@ h2 {
 
 .titolo-testo p {
     font-size: 20px;
-    margin-top: 16px;
-    margin-bottom: 16px;
+    margin: 16px 0;
     line-height: 130%;
     letter-spacing: 0.5px;
 }
@@ -168,6 +237,7 @@ h2 {
 
 .titolo-testo {
     max-width: 544px;
+    margin: 0 16px;
 }
 
 .titolo-testo a {
@@ -188,8 +258,15 @@ h2 {
     box-shadow: none;
 }
 
-.citazione-link p {
+.citazione-link {
     max-width: 736px;
+}
+
+.citazione-link2 {
+    max-width: 736px;
+} 
+
+.citazione-link p {
     font-size: 30px;
     color: #FFF;
     margin: 0 0 16px 0;
@@ -213,7 +290,6 @@ h2 {
 }
 
 .citazione-link2 p {
-    max-width: 736px;
     line-height: 130%;
     letter-spacing: 0.5px;
     font-size: 28px;
@@ -246,8 +322,6 @@ h2 {
     border-radius: 12px;
     box-shadow: 1px 1px 3px 0px #000, 1px -1px 4px 0px rgba(0, 0, 0, 0.50) inset;
 }
-
-
 
 .citazione-link a:hover {
     background-color: #d9d9d9;
@@ -545,19 +619,11 @@ footer a h4:hover {
     padding: 0;
 }
 
-.lista-elenco2 strong {
-    line-height: 40px;
-}
-
 .lista-elenco p {
     width: 640px;
     margin: 0;
     padding: 0;
     font-weight: 600;
-}
-
-.lista-elenco strong {
-    line-height: 40px;
 }
 
 .lista-elenco li {
@@ -577,4 +643,427 @@ footer a h4:hover {
 .titolo-testo li {
     margin-bottom: 32px;
 }
+
+@media only screen and (max-width: 800px) {
+
+    .checkbox {
+      display: block;
+    }
+
+    nav ul {
+      gap: 10px;
+      flex-direction: column;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      background-color: #333;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      text-align: center;
+    }
+  
+    input[type="checkbox"]:checked ~ nav ul {
+      opacity: 100;
+    }
+  
+    .hamburger-lines {
+        margin-top: 19px;
+        display: flex;
+    }
+  
+    ul li {
+        display: block;
+    }
+
+    header {
+        max-width: 100%;
+        margin: 32px auto 0;
+    }
+
+    .navigazione {
+        margin: 0 16px;
+        border-bottom: solid white 2px;
+    }
+    
+    .illustrazione {
+        max-width: 100%;
+        margin: 16px auto 0;
+    }
+    
+    .illustrazione img {
+        background-color: #a5b979;
+        max-width: 100%;
+        display: block;
+        border: solid white 3px;
+        border-radius: 20px;
+        object-fit: cover;
+        margin: 0;
+    }
+
+    h1 {
+        max-width: 320px;
+        color: #FFF;
+        text-transform: uppercase;
+        font-family: "Montserrat";
+        font-weight: 400;
+        font-size: 40px;
+        margin: 0;
+    }
+    
+    h2 {
+        max-width: 320px;
+        font-size: 28px;
+        font-weight: 300;
+        color: #FFF;
+        padding: 0;
+        margin: 0 0 8px 0;
+        font-family: "Montserrat";
+    }
+
+    .testo-presentazione {
+        max-width: 100%;
+    }
+    
+    .titolo-testo-inizio {
+        margin: 8px 0;
+        max-width: 320px;
+        padding: 0 16px;
+    }
+    
+    .titolo-testo-inizio p1 {
+        font-weight: 600;
+        font-size: 16px;
+        color: #FFF;
+        line-height: 130%;
+        letter-spacing: 0.5px;
+    }
+
+    .titolo-testo-inizio h2 {
+        margin-top: 32px;
+        font-family: "Montserrat";
+    }
+    
+    .titolo-testo-inizio p {
+        font-size: 16px;
+        font-weight: 400;
+        margin-top: 12px;
+        margin-bottom: 16px;
+        color: #FFF;
+        line-height: 130%;
+        letter-spacing: 0.5px;
+    }
+
+    .testo {
+        max-width: 100%;
+        margin: 120px 0 0;
+    }
+        
+    .testo2 {
+        max-width: 100%;
+        margin: 120px 0 0; 
+    }
+
+    .testo-cit {
+        max-width: 100%;
+        margin: 120px 0;
+        display: grid;
+        justify-content: right;
+    }
+    
+    .testo-cit2 {
+        margin: 120px 0;
+        max-width: 100%;
+        display: grid;
+        justify-content: right;
+    }
+
+    .citazione-link {
+        max-width: 280px;
+        padding: 16px 32px 16px 24px;
+        background-color: #fff;
+        border-radius: 20px 0 0 20px;
+    }
+    
+    .citazione-link2 {
+        max-width: 280px;
+        padding: 16px 32px 16px 24px;
+        background-color: #FFF;
+        border-radius: 20px 0 0 20px;
+    } 
+
+    .citazione-link p {
+        font-size: 18px;
+        color: #000;
+        margin: 0 0 16px 0;
+        line-height: 120%;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+    }
+
+    .citazione-link2 p {
+        line-height: 120%;
+        letter-spacing: 0.5px;
+        font-size: 18px;
+        color: #000;
+        margin: 0 0 16px 0;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+    }
+    
+    .citazione-link2 a {
+        font-size: 16px;
+        font-family: "Montserrat";
+        font-weight: 600;
+        text-decoration: none;
+        color: #fff;
+        padding: 6px 24px;
+        background: #000;
+        border-radius: 10px;
+        box-shadow: 1px 1px 3px 0px #000, 1px -1px 4px 0px rgba(0, 0, 0, 0.50) inset;
+    }
+    
+    .citazione-link a {
+        font-size: 16px;
+        font-family: "Montserrat";
+        font-weight: 600;
+        text-decoration: none;
+        color: #fff;
+        padding: 6px 24px;
+        background: #000;
+        border-radius: 10px;
+        box-shadow: 1px 1px 3px 0px #000, 1px -1px 4px 0px rgba(0, 0, 0, 0.50) inset;
+    }
+
+    .citazione-link a:hover {
+        background-color: #717171;
+        box-shadow: none;
+        text-decoration: none;
+    }
+    
+    .citazione-link2 a:hover {
+        background-color: #717171;
+        box-shadow: none;
+        text-decoration: none;
+    }
+
+    .titolo-testo p {
+        font-size: 16px;
+        margin: 16px 0;
+        line-height: 130%;
+        letter-spacing: 0.5px;
+    }
+    
+    .titolo-testo p1 {
+        font-weight: 600;
+        font-size: 16px;
+        color: #FFF;
+        line-height: 130%;
+        letter-spacing: 0.5px;
+    }
+
+    .card {
+        max-width: 100%;
+        margin:  120px auto 0;
+        padding: 0 16px;
+    }
+    
+    .card h2 {
+        margin-bottom: 16px;
+        font-size: 28px;
+        max-width: 320px;
+    }
+
+    .griglia {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+    }
+    
+    .griglia-brand {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+        margin: auto;
+    }
+    
+    .griglia img {
+        display: block;
+        border-radius: 10px;
+        border: solid white 2px;
+        height: 200px;
+        max-width: 100%;
+        object-fit: cover;
+    }
+
+    footer {
+        max-width: 100%;
+        margin: 240px auto 16px;
+        padding: 0 16px;
+    }
+    
+    footer a {
+        text-decoration: none;
+        color: #FFF;
+    }
+    
+    footer a h5 {
+        max-width: 200px;
+        font-family: "Montserrat";
+        text-transform: uppercase;
+        color: #fff;
+        letter-spacing: -4px;
+        font-size: 24px;
+        font-weight: 200;
+        border-bottom: #FFF solid 1px;
+        margin: 0;
+    }
+    
+    footer h5:hover {
+        color: #a5b979;
+    }
+    
+    .chisiamo-contatti {
+        margin: 48px 0 16px 0;
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .chisiamo-contatti > * {
+        flex: 1 100%;
+    }
+
+    .chisiamo {
+        margin-top: 16px;
+    }
+    
+    footer h4 {
+        margin: 0;
+        color: #FFF;
+        font-family: "Montserrat";
+    }
+    
+    footer .chisiamo a {
+        text-decoration: none;
+    }
+    
+    .chisiamo a h4 {
+        border: 2px white solid;
+        font-weight: 600;
+        color: #000;
+        border-radius: 10px;
+        padding: 4px 34px;
+        color: #FFF;
+        font-size: 14px;
+    }
+    
+    .chisiamo a h4:hover {
+        background-color: #FFF;
+        color: #000;
+    }
+    
+    footer a h4:hover {
+        box-shadow: none;
+        background-color: #d9d9d9;
+    }
+    
+    .chisiamo-contatti ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .chisiamo-contatti li {
+        padding: 0;
+        margin: 4px 0 0;
+    }
+    
+    .chisiamo-contatti a {
+        padding: 0;
+        margin: 0;
+        font-weight: 200;
+        text-decoration: none;
+        font-size: 14px;
+        color: #FFF;
+    }
+    
+    .chisiamo-contatti h4 {
+        font-size: 16px;
+    }
+    
+    .chisiamo-contatti a:hover {
+        color: #d9d9d9;
+        text-decoration: underline;
+    }
+    
+    .chisiamo-contatti p {
+        color: #fff;
+    }
+    
+    .contatti {
+        padding: 0;
+        margin: 0;
+    }
+    
+    .sotto-linea {
+        border-top: 2px solid white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .sotto-linea a {
+        font-size: 12px;
+        margin-top: 4px;
+        color: #FFF;
+    }
+    
+    .sotto-linea a:hover {
+        color: #d9d9d9;
+    }
+    
+    .sotto-linea ul {
+        margin-top: 16px;
+        gap: 40.5px;
+        display: flex;
+        list-style-type: none;
+    }
+    
+    .lista-elenco2 ul li p {
+        margin: 0;
+        font-size: 20px;
+    }
+    
+    .lista-elenco2 ul li {
+        margin-bottom: 16px;
+        padding: 0;
+    }
+    
+    .lista-elenco2 p1 {
+        font-size: 30px;
+        font-weight: 600;
+    }
+    
+    .lista-elenco {
+        font-size: 30px;
+        color: #FFF;
+    }
+    
+    .lista-elenco2 {
+        font-size: 30px;
+        color: #FFF;
+        width: 640px;
+    }
+    
+    .lista-elenco2 ul li p {
+        margin-bottom: 16px;
+        padding: 0;
+    }
+    
+    .lista-elenco2 ul {
+        margin: 0;
+        padding: 0;
+    }
+  }
 
