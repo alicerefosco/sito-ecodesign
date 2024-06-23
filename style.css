@@ -143,7 +143,7 @@ input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
     display: block;
     height: 32px;
     width: 32px;
-    top: 16x;
+    top: 32px;
     right: 16px;
     z-index: 5;
     opacity: 0;
@@ -338,6 +338,7 @@ h2 {
 .card {
     max-width: 1120px;
     margin:  240px auto 0;
+    padding: 0 16px;
 }
 
 .card h2 {
@@ -349,6 +350,7 @@ h2 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 16px;
+    padding: 0 16px;
 }
 
 .elenco-lista-link li {
@@ -411,7 +413,7 @@ h2 {
     border-radius: 10px;
     box-shadow: 2px 2px 5px 0px #000, 1px -1px 4px 0px rgba(0, 0, 0, 0.50) inset;
     background: #FFF;
-    margin-top: 8px;
+    margin: 8px 0 0 0;
     text-align: center;
     padding: 6px 0;
     color: #121212;
@@ -449,7 +451,8 @@ h2 {
 
 footer {
     max-width: 1120px;
-    margin: 240px auto 0;
+    margin: 240px auto 16px;
+    padding: 0 16px;
 }
 
 footer a {
@@ -646,6 +649,15 @@ footer a h4:hover {
 
 @media only screen and (max-width: 800px) {
 
+    header a h5 {
+        font-family: "Montserrat";
+        letter-spacing: -5px;
+        font-size: 32px;
+        margin: 0;
+        font-weight: 400;
+        line-height: 100%;
+    }
+
     .checkbox {
       display: block;
     }
@@ -669,7 +681,7 @@ footer a h4:hover {
     }
   
     .hamburger-lines {
-        margin-top: 19px;
+        margin-top: 17.5px;
         display: flex;
     }
   
@@ -756,12 +768,10 @@ footer a h4:hover {
     }
 
     .testo {
-        max-width: 100%;
         margin: 120px 0 0;
     }
         
     .testo2 {
-        max-width: 100%;
         margin: 120px 0 0; 
     }
 
@@ -773,7 +783,7 @@ footer a h4:hover {
     }
     
     .testo-cit2 {
-        margin: 120px 0;
+        margin: 64px 0;
         max-width: 100%;
         display: grid;
         justify-content: right;
@@ -848,6 +858,10 @@ footer a h4:hover {
         text-decoration: none;
     }
 
+    .titolo-testo {
+        max-width: 320px;
+    }
+
     .titolo-testo p {
         font-size: 16px;
         margin: 16px 0;
@@ -878,13 +892,13 @@ footer a h4:hover {
     .griglia {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 32px;
+        gap: 16px;
     }
     
     .griglia-brand {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 32px;
+        gap: 16px;
         margin: auto;
     }
     
@@ -892,14 +906,36 @@ footer a h4:hover {
         display: block;
         border-radius: 10px;
         border: solid white 2px;
-        height: 200px;
+        height: 180px;
         max-width: 100%;
         object-fit: cover;
+        margin: 0;
+    }
+
+    .griglia-brand img {
+        display: block;
+        border-radius: 10px;
+        border: solid white 2px;
+        height: 200px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .griglia-brand h3 {
+        font-family: "Montserrat";
+        font-size: 16px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 5px 0px #000, 1px -1px 4px 0px rgba(0, 0, 0, 0.50) inset;
+        background: #FFF;
+        margin: 8px 0 0;
+        text-align: center;
+        padding: 5px 0;
+        color: #121212;
     }
 
     footer {
         max-width: 100%;
-        margin: 240px auto 16px;
+        margin: 120px auto 16px;
         padding: 0 16px;
     }
     
@@ -935,7 +971,7 @@ footer a h4:hover {
     }
 
     .chisiamo {
-        margin-top: 16px;
+        margin: 32px 0 0;
     }
     
     footer h4 {
@@ -1032,7 +1068,9 @@ footer a h4:hover {
     
     .lista-elenco2 ul li p {
         margin: 0;
-        font-size: 20px;
+        font-size: 16px;
+        margin-top: 8px;
+        margin-bottom: 8px;
     }
     
     .lista-elenco2 ul li {
@@ -1041,29 +1079,93 @@ footer a h4:hover {
     }
     
     .lista-elenco2 p1 {
-        font-size: 30px;
+        font-size: 18px;
         font-weight: 600;
     }
     
     .lista-elenco {
-        font-size: 30px;
+        font-size: 18px;
         color: #FFF;
     }
     
     .lista-elenco2 {
-        font-size: 30px;
+        font-size: 18px;
         color: #FFF;
-        width: 640px;
+        width: 320px;
     }
     
     .lista-elenco2 ul li p {
-        margin-bottom: 16px;
+        margin-bottom: 8px;
         padding: 0;
+        line-height: 120%;
     }
     
     .lista-elenco2 ul {
         margin: 0;
+        padding: 0 32px 0 0;
+        line-height: 100%;
+    }
+    
+    .lista-elenco p {
+        width: 320px;
+        margin: 0;
         padding: 0;
+        font-weight: 600;
+    }
+    
+    .lista-elenco li {
+        margin-bottom: 16px;
+    }
+    
+    .lista-elenco ul {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .titolo-testo ul {
+        color: white;
+        padding: 0;
+    }
+    
+    .titolo-testo li {
+        margin-bottom: 32px;
+    }
+
+    .elenco-lista-link {
+        margin-top: 64px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+    
+    .elenco-lista-link li {
+        list-style-type: none;
+    }
+    
+    .elenco-lista-link a {
+        text-align: center;
+        font-size: 16px;
+        font-family: "Montserrat";
+        font-weight: bold;
+        text-decoration: none;
+        color: #000;
+        padding: 6px 0;
+        background: #fff;
+        border-radius: 14px;
+        box-shadow: 1px 1px 3px 0px #000, 1px -1px 4px 0px rgba(0, 0, 0, 0.50) inset;
+    }
+
+    .titolo-testo a {
+        font-size: 16px;
+        font-family: "Montserrat";
+        font-weight: bold;
+        text-decoration: none;
+        color: #000;
+        padding: 6px 24px;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 1px 1px 3px 0px #000, 1px -1px 4px 0px rgba(0, 0, 0, 0.50) inset;
+        letter-spacing: 0.5px;
     }
   }
 
