@@ -680,7 +680,6 @@ footer a h4:hover {
       height: 100%;
       justify-content: center;
       text-align: center;
-      display: none;
     }
   
     input[type="checkbox"]:checked ~ nav ul {
@@ -1089,6 +1088,7 @@ footer a h4:hover {
     .lista-elenco2 p1 {
         font-size: 18px;
         font-weight: 600;
+        padding-right: 16px;
     }
     
     .lista-elenco {
