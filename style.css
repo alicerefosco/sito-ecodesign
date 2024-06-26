@@ -194,7 +194,7 @@ h2 {
 
 .titolo-testo-inizio {
     margin: 32px 0;
-    max-width: 544px;
+    max-width: 800px;
     padding: 0 16px;
 }
 
@@ -738,7 +738,6 @@ footer a h4:hover {
     }
     
     .illustrazione img {
-        background-color: #a5b979;
         max-width: 100%;
         display: block;
         border: solid white 2px;
